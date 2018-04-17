@@ -6,34 +6,38 @@ require "google_drive"
 #recuperation de la liste des communes via le google drive
 def get_city
 
-	session = GoogleDrive::Session.from_config("config.json")
-	ws = session.spreadsheet_by_key("1cMn78fjMDMmt8BIENpq0sjPeNASopj50wwUKSXDqs5s").worksheets[0]
-
-	array = []
-	(2..ws.num_rows).each do |row|
-	    array << ws[row, 1]
+#initialisation du spreadsheet
+	session = GoogleDrive::Session.from_config("../config.json")
+	ws = session.spreadsheet_by_key("1J1AkBoW01NpK3-brJgAyGw5pg33g36lAoEXnO12EDxg").worksheets[0]
+#initialisation des données
+	i = 2
+	city = ws[i, 1]
+#boucle pour passer sur chaque ligne du spreadsheet
+	until ws[i, 1] == ws[129, 1] do
+		add_twitter(city)
+		i += 1
 	end
-	return array
 end
 
-def get_twitter(get_city)
+#methode pour follow sur Twitter
+def add_twitter(city)
 
-	client = Twitter::Streaming::Client.new do |config|
-	  config.consumer_key        = "Yn6Id1PvHlbdv3cNall3EcKG4V"
-	  config.consumer_secret     = "P8buSS6VSdN7n8JkSRftNd4mPl4t1wvKG8t2RFh4GGPP2ehyZR"
-	  config.access_token        = "984020868560031745-wCcd2semPNEixFrO5LOylKeOyuQHJh9"
-	  config.access_token_secret = "6MR9ZWnlRvJAaw4v42lQsqfeTNesV5ouaH7rSwezV9amY"
+#initialisation des identifiants
+	client = Twitter::REST::Client.new do |config|
+	  config.consumer_key        = "PUTS YOUR KEY"
+	  config.consumer_secret     = "PUTS YOUR KEY"
+	  config.access_token        = "PUTS YOUR KEY"
+	  config.access_token_secret = "PUTS YOUR KEY"
 	end
 
-	get_city.each do |info|
-		topics = info
-		client.filter(track: topics) do |object|
-  			puts object.text if object.is_a?(Twitter::Tweet)
-		end
-	end
-
+# FAIL malheureusement nous n'avons pas reussi ... 
+	info = client.user_search(city)
+	puts city
+	info.follow(city)
 
 end
 
-get_twitter(get_city)
+get_city
+
+
 

@@ -3,10 +3,10 @@
 -------------
 
 ### Introduction : Présentation de l'équipe
-	-Raouf (@raouf)
-	-Manu (@tinoun)
-	-Youcef (@youcef)
-	-Berangere (@ekkhi)
+- Raouf (@raouf)
+- Manu (@tinoun)
+- Youcef (@youcef)
+- Berangere (@ekkhi)
 
 -------------
 
@@ -25,15 +25,23 @@ ou encore `gem update`
 
 ### Arborescence du projet
 
-Dossier
+Dossier *database*
+Il contient le fichier townhalls.csv, il regroupe 
 
 ------------
 
 ### Utilisation du programme
 
+En premier lieu renseignes ton config.json dans le dossier scrapper.
+Ensuite lance le programme townhalls_scrapper.rb , il va recuperer les données utiles et les intégrer à la feuille de calcul : [ici](https://docs.google.com/spreadsheets/d/1cMn78fjMDMmt8BIENpq0sjPeNASopj50wwUKSXDqs5s/edit#gid=0).
+
+
 ------------
 
 ### Description du programme
+
+*Dossier Scrapper*
+
 
 ------------
 

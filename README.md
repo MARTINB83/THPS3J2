@@ -36,8 +36,7 @@ Dossier **scrapper**
 Dossier **twitter**
 - Fichier : *townhalls_adder_to_db.rb* => Permet de follow sur Twitter **NON VALIDE**
 
-
-
+Racine
 - Fichier **README.md** : Retrouve ici toutes les informations dont tu as besoin
 - Fichier **Gemfile** : Ici se trouve toute les gems dont tu as besoin
 - Fichier **config.json** : Fichier à renseigner avec tes propres cles
@@ -59,7 +58,7 @@ Dossier **twitter**
 
 
 
-##Merci pour la correction ! 
+## Merci pour la correction ! 
 
 
 ![alt tag](https://user-images.githubusercontent.com/37908682/38898586-acc9ed70-4295-11e8-9433-fa83027043be.png)

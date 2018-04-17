@@ -47,10 +47,10 @@ Dossier **twitter**
 - En premier lieu renseignes ton config.json
 - Va dans le dossier **scrapper**
 - Ensuite lance le programme **townhalls_scrapper.rb** , il va recuperer les données utiles et les intégrer à la feuille de calcul : [vas voir ici](https://docs.google.com/spreadsheets/d/1cMn78fjMDMmt8BIENpq0sjPeNASopj50wwUKSXDqs5s/edit#gid=0).
-<br>
+
 - Reviens dans la console et va ensuite dans le dossier **mailer**
 - Lance le programme **townhalls_mailer.rb** , il va envoyer un mail à toute les mairies des Bouches du Rhone (13) pour leur faire decouvrir THP **trop cool!!**
-<br>
+
 - Et VOILAAAAA parce que le bot Twitter, on a pas réussi :(
 
 ------------
